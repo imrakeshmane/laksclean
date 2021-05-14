@@ -153,7 +153,7 @@ const MyBookings = (props) => {
                     viewportContent={'width=device-width, user-scalable=no'}
                     source={{ uri: url }} /> */}
 
-                 <AutoHeightWebView
+                <AutoHeightWebView
 
                     onLoadStart={() => {
                         // setLoader(true)
@@ -169,7 +169,7 @@ const MyBookings = (props) => {
                     scalesPageToFit={true}
                     viewportContent={'width=device-width, user-scalable=no'}
 
-                /> 
+                />
             </View>
         )
 
@@ -233,7 +233,7 @@ const MyBookings = (props) => {
             {showLoader ? <Loader /> : <>
 
 
-                <Text style={{ color: 'white', fontSize: 18, padding: 10, paddingVertical: 15, textAlign: 'center', backgroundColor: colors.primary, fontWeight: 'bold' }}>Welcome </Text>
+                <Text style={{ color: 'white', fontSize: 18, padding: 10, paddingVertical: 15, textAlign: 'center', backgroundColor: colors.primary, fontWeight: 'bold' }}>Booking </Text>
 
                 <AppWebView />
 

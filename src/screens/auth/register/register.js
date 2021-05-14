@@ -99,7 +99,7 @@ const Register = (props) => {
         const formData = new FormData();
         formData.append('first_name', registerParams.firstName);
         formData.append('last_name', registerParams.lastName);
-        formData.append('country_code', countryCodeItem);
+        formData.append('country_code', registerParams.countryCode);
         formData.append('mobile_no', registerParams.mobileNo);
         formData.append('password', registerParams.password);
         formData.append('lat', 2132222);
@@ -178,7 +178,7 @@ const Register = (props) => {
         const formData = new FormData();
         formData.append('first_name', registerParams.firstName);
         formData.append('last_name', registerParams.lastName);
-        formData.append('country_code', countryCodeItem);
+        formData.append('country_code', registerParams.countryCode);
         formData.append('mobile_no', registerParams.mobileNo);
         formData.append('password', registerParams.password);
         formData.append('lat', 212121);
@@ -609,7 +609,9 @@ const Register = (props) => {
                                             name={'check-circle'}
                                             style={{ fontSize: 30, color: colors.lightblueColor }}
                                         />
-                                        <TouchableOpacity onPress={() => { Linking.openURL('http://google.com') }}>
+                                        <TouchableOpacity onPress={() => {
+                                            Linking.openURL('https://laksclean.com/Dev-Laksclean/term-conditions')
+                                        }}>
 
                                             <Text
 

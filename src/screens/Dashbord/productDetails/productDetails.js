@@ -34,7 +34,7 @@ const ProductDetails = (props) => {
     const { productInfo = '', productList } = navigation.state.params;
     console.log(productInfo, 'productInfo');
     const [productDetails, setProductDetails] = useState(productInfo)
-    const[imagePath,setImagePath]=useState('https://laksclean.com/Dev-Laksclean/upload/')
+    const [imagePath, setImagePath] = useState('https://laksclean.com/Dev-Laksclean/upload/')
 
     const [images, setImages] = useState([require('../../../assets/slider1.jpg'), require('../../../assets/slider2.jpeg'),
     require('../../../assets/slider3.jpeg'),
@@ -92,7 +92,7 @@ const ProductDetails = (props) => {
                 padding: 5
             }}>
                 <Image resizeMode={'contain'}
-                    source={item.main_image ?{uri:imagePath+item.main_image}: require('../../../assets/product3.jpeg')} style={{ width: 150, height: 70, borderRadius: 10, padding: 5, justifyContent: 'center' }} />
+                    source={item.main_image ? { uri: imagePath + item.main_image } : require('../../../assets/product3.jpeg')} style={{ width: 150, height: 70, borderRadius: 10, padding: 5, justifyContent: 'center' }} />
                 <View style={{ flexDirection: 'column', justifyContent: 'center', width: '70%' }}>
 
                     <Text numberOfLines={1} style={{ color: '#000', fontSize: 12, justifyContent: 'center', alignSelf: 'center', padding: 2 }}>{item.product_name}</Text>
@@ -120,7 +120,7 @@ const ProductDetails = (props) => {
                     <ScrollView>
                         <View style={{ backgroundColor: '#fff' }}>
                             <View style={{ flex: 1, margin: 5, }}>
-                                <Image resizeMode={"center"} source={productDetails.main_image ?{uri:imagePath+productDetails.main_image}: require('../../../assets/product3.jpeg')} style={{ width: '100%', height: 150, alignSelf: 'center', borderRadius: 20, marginTop: 10 }} />
+                                <Image resizeMode={"center"} source={productDetails.main_image ? { uri: imagePath + productDetails.main_image } : require('../../../assets/product3.jpeg')} style={{ width: '100%', height: 150, alignSelf: 'center', borderRadius: 20, marginTop: 10 }} />
                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 20, marginTop: 10 }}>
                                     <Text style={{ color: '#676A6C', fontSize: 14, fontWeight: 'bold', }}>{productDetails && productDetails.product_name}</Text>
                                     <Text style={{ color: '#4C9BE9', fontSize: 16, fontWeight: 'bold', }}>$ {productDetails && productDetails.selling_price}</Text>
@@ -128,7 +128,7 @@ const ProductDetails = (props) => {
 
                                 <Text style={{ color: '#676A6C', fontSize: 12, fontWeight: 'bold', width: 170, marginHorizontal: 20 }}>{productDetails && productDetails.short_desc}</Text>
                                 <View style={{ flexDirection: 'row', width: 100, alignItems: 'center', marginTop: 20, justifyContent: 'space-around' }}>
-                                    <TouchableOpacity onPress={() => {
+                                    {/* <TouchableOpacity onPress={() => {
                                         setProductCount(productCount + 1)
                                     }} style={{ padding: 8, marginHorizontal: 10, backgroundColor: colors.lightblueColor, borderRadius: 5 }}>
                                         <Icons name="ios-add" size={15} color="white" />
@@ -140,10 +140,10 @@ const ProductDetails = (props) => {
                                         }
                                     }} style={{ padding: 8, marginHorizontal: 10, backgroundColor: colors.lightblueColor, borderRadius: 5 }}>
                                         <Icons name="ios-remove" size={15} color="white" />
-                                    </TouchableOpacity>
+                                    </TouchableOpacity> */}
                                 </View>
                                 <TouchableOpacity onPress={() => {
-                                    console.log(productDetails,'productDetails')
+                                    console.log(productDetails, 'productDetails')
                                     addTocart(productDetails.id)
                                 }} style={{ backgroundColor: colors.lightblueColor, width: '40%', padding: 5, borderRadius: 5, marginVertical: 5, marginHorizontal: 10, alignSelf: 'flex-end' }}>
                                     <Text style={{ color: "white", fontWeight: 'bold', textAlign: 'center', marginHorizontal: 5 }}>Add to Cart </Text>

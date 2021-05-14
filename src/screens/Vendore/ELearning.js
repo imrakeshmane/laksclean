@@ -75,7 +75,7 @@ const ELearning = (props) => {
             <View style={{ flex: 1 }}>
 
 
-                {/* <WebView
+                <WebView
                     onLoadStart={() => {
 
                         // setLoader(true)
@@ -98,9 +98,9 @@ const ELearning = (props) => {
                     // source={{ uri: url }}
                     scalesPageToFit={true}
                     viewportContent={'width=device-width, user-scalable=no'}
-                    source={{ uri: url }} /> */}
+                    source={{ uri: url }} />
 
-                <AutoHeightWebView
+                {/* <AutoHeightWebView
 
                     onLoadStart={() => {
                         // setLoader(true)
@@ -116,7 +116,7 @@ const ELearning = (props) => {
                     scalesPageToFit={true}
                     viewportContent={'width=device-width, user-scalable=no'}
 
-                />
+                /> */}
             </View>
         )
 

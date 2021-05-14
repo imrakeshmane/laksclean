@@ -33,7 +33,7 @@ const VendorMyServices = (props) => {
 
     const { navigation } = props;
     useEffect(() => {
-                console.log(props,'props')
+        console.log(props, 'props')
 
         getActiveServices()
     }, [])
@@ -111,38 +111,38 @@ const VendorMyServices = (props) => {
     }
 
 
- 
 
 
 
 
-   
 
-const activeDeactiveServeces =(id) =>{
-    const formData = new FormData();
-    formData.append('user_id', props.userInfo.id);
-    formData.append('service_id', id);
-    setLoader(true);
 
-    Api.postApi(formData, 'Api_controller/ActiveService')
-        .then(response => {
-            console.log("ActiveService", response)
-            if (response && response.status === 200) {
-            Toaster.SuccessToaster("done")
-            getActiveServices()
-              //  setActiveServices(response.data.service);
-            } else {
+
+    const activeDeactiveServeces = (id) => {
+        const formData = new FormData();
+        formData.append('user_id', props.userInfo.id);
+        formData.append('service_id', id);
+        setLoader(true);
+
+        Api.postApi(formData, 'Api_controller/ActiveService')
+            .then(response => {
+                console.log("ActiveService", response)
+                if (response && response.status === 200) {
+                    Toaster.SuccessToaster("done")
+                    getActiveServices()
+                    //  setActiveServices(response.data.service);
+                } else {
+                    setLoader(false);
+                }
                 setLoader(false);
-            }
-            setLoader(false);
 
-        })
-        .catch(error => {
-            setLoader(false);
-            console.log(error)
-        })
+            })
+            .catch(error => {
+                setLoader(false);
+                console.log(error)
+            })
 
-}
+    }
 
     const renderAllServices = ({ item, index }) => {
         return (
@@ -163,7 +163,7 @@ const activeDeactiveServeces =(id) =>{
                     {activeIndex === 3 && <TouchableOpacity style={{ marginVertical: 8, flex: 1, alignSelf: 'flex-end' }} onPress={() => {
                         activeDeactiveServeces(item.id)
                     }}>
-                        <Text style={{ backgroundColor:item.activve_inactive === "0" ? colors.primary:'red', fontWeight: 'bold', color: '#fff', fontSize: 12, borderRadius: 5, padding: 5, justifyContent: 'center', textAlign: 'center', }}>{item.activve_inactive === "0" ? "Add Service" : "Remove Service"}</Text>
+                        <Text style={{ backgroundColor: item.activve_inactive === "0" ? colors.primary : 'red', fontWeight: 'bold', color: '#fff', fontSize: 12, borderRadius: 5, padding: 5, justifyContent: 'center', textAlign: 'center', }}>{item.activve_inactive === "0" ? "Add Service" : "Remove Service"}</Text>
                     </TouchableOpacity>}
                 </View>
 
@@ -241,7 +241,7 @@ const activeDeactiveServeces =(id) =>{
     return (
         <SafeAreaView style={{ backgroundColor: '#fff', flex: 1 }}>
             {showLoader ? <Loader /> : <>
-                <Text style={{ color: 'white', fontSize: 18, padding: 10, paddingVertical: 15, textAlign: 'center', backgroundColor: colors.primary, fontWeight: 'bold' }}>Welcome </Text>
+                <Text style={{ color: 'white', fontSize: 18, padding: 10, paddingVertical: 15, textAlign: 'center', backgroundColor: colors.primary, fontWeight: 'bold' }}>Services </Text>
 
                 <ScrollView>
                     <AppWebView />

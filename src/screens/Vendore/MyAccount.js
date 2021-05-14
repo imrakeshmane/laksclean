@@ -203,7 +203,7 @@ const MyAccountVendor = (props) => {
                         alignSelf: 'center',
                         flex: 2,
                     }}
-                    name="ios-build"
+                    name="ios-cube"
                     size={25}
                     color="#000"
                 />
@@ -272,7 +272,7 @@ const MyAccountVendor = (props) => {
                     marginTop: 5,
                     marginBottom: 5,
                 }}>
-                <IconNew
+                <IonicIcons
                     style={{
                         padding: 10,
                         color: '#42a5f5',
@@ -281,7 +281,7 @@ const MyAccountVendor = (props) => {
                         alignSelf: 'center',
                         flex: 2,
                     }}
-                    name="calendar-range"
+                    name="ios-analytics"
                     size={25}
                     color="#000"
                 />

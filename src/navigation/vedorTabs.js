@@ -21,6 +21,7 @@ import VendorAccountStack from './bottomStacks/vendorAccountStack';
 import VendorMyShopStack from './bottomStacks/vendorProduct';
 
 
+import Icons from 'react-native-vector-icons/FontAwesome';
 
 
 
@@ -33,7 +34,7 @@ const VendorTabs = createBottomTabNavigator({
 
             tabBarIcon: ({ tintColor, focused }) => (
                 <View style={{ alignContent: 'center', alignItems: 'center', marginBottom: 10, marginTop: 10 }}>
-                    <Icon name="ios-home" size={22} color={tintColor} />
+                    <Icons name="home" size={22} color={tintColor} />
                 </View>
             ),
         },
@@ -90,7 +91,7 @@ const VendorTabs = createBottomTabNavigator({
             tabBarLabel: 'My Profile',
             tabBarIcon: ({ tintColor, focused }) => (
                 <View style={{ alignContent: 'center', alignItems: 'center', marginBottom: 10, marginTop: 10 }}>
-                    <Icon name="ios-person" size={22} color={tintColor} />
+                    <Icon name="ios-people" size={22} color={tintColor} />
                 </View>
             ),
         },
