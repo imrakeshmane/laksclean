@@ -42,7 +42,8 @@ const Register = (props) => {
         password: '',
         confirmPassword: '',
         otp: '',
-        User_id: ''
+        User_id: '',
+        email: ''
     });
     const [countryCodeItem, setCountryCodeItem] = useState('');
     const [InsertOTP, setOTPScreen] = useState(false)
@@ -78,6 +79,12 @@ const Register = (props) => {
             return
 
         }
+        if (!registerParams.email) {
+            // setErrorMsg('Please insert Mobile Number');
+            alert('Please insert Email');
+            return
+
+        }
         if (!registerParams.password) {
             // setErrorMsg('Please insert Password');
             alert('Please insert Password')
@@ -101,6 +108,7 @@ const Register = (props) => {
         formData.append('last_name', registerParams.lastName);
         formData.append('country_code', registerParams.countryCode);
         formData.append('mobile_no', registerParams.mobileNo);
+        formData.append('email', registerParams.email);
         formData.append('password', registerParams.password);
         formData.append('lat', 2132222);
         formData.append('long', 1111111);
@@ -167,6 +175,12 @@ const Register = (props) => {
             return
 
         }
+        if (!registerParams.email) {
+            // setErrorMsg('Please insert Mobile Number');
+            alert('Please insert Email');
+            return
+
+        }
         if (!registerParams.password) {
             // setErrorMsg('Please insert Password');
             alert('Please insert Password')
@@ -180,6 +194,7 @@ const Register = (props) => {
         formData.append('last_name', registerParams.lastName);
         formData.append('country_code', registerParams.countryCode);
         formData.append('mobile_no', registerParams.mobileNo);
+        formData.append('email', registerParams.email);
         formData.append('password', registerParams.password);
         formData.append('lat', 212121);
         formData.append('long', 121212121);
@@ -517,7 +532,28 @@ const Register = (props) => {
 
                                     </View>
 
-
+                                    <View
+                                        style={{
+                                            flexDirection: 'row',
+                                            alignItems: 'center',
+                                            borderColor: 'gray',
+                                            borderWidth: 1,
+                                            borderRadius: 5,
+                                            marginTop: 10,
+                                            justifyContent: 'space-between',
+                                        }}>
+                                        <TextInput style={{ marginLeft: 20, width: '100%' }} placeholder="Email"
+                                            value={registerParams.email} onChangeText={value => {
+                                                setRegisterParums({ ...registerParams, email: value })
+                                            }}
+                                        />
+                                        <Icon
+                                            style={styles.searchIcon}
+                                            name="user"
+                                            size={20}
+                                            color="#000"
+                                        />
+                                    </View>
 
                                     <View
                                         style={{
@@ -661,6 +697,8 @@ const Register = (props) => {
                                             setRegisterParums({ registerParams, mobileNo: '' })
                                             setRegisterParums({ registerParams, password: '' })
                                             setRegisterParums({ registerParams, confirmPassword: '' })
+                                            setRegisterParums({ registerParams, email: '' })
+
                                         }}>
                                         <Text
                                             style={{
