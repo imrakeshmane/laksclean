@@ -37,7 +37,7 @@ const Register = (props) => {
     const [registerParams, setRegisterParums] = useState({
         firstName: '',
         lastName: '',
-        countryCode: '+91',
+        countryCode: '+1',
         mobileNo: '',
         password: '',
         confirmPassword: '',
@@ -510,10 +510,11 @@ const Register = (props) => {
                                     }}
                                 /> */}
                                         <TextInput keyboardType={"phone-pad"}
-                                            maxLength={10} style={{
+                                            // maxLength={10} 
+                                            style={{
                                                 width: '25%', height: 40, borderColor: 'gray', borderRadius: 5,
                                                 borderWidth: 1, textAlign: 'center'
-                                            }} placeholder="+91"
+                                            }} placeholder="+1"
                                             value={registerParams.countryCode}
                                             onChangeText={value => {
                                                 setRegisterParums({ ...registerParams, countryCode: value })
@@ -521,7 +522,8 @@ const Register = (props) => {
                                         />
 
                                         <TextInput keyboardType={"phone-pad"}
-                                            maxLength={10} style={{
+                                            // maxLength={10} 
+                                            style={{
                                                 width: '70%', height: 40, borderColor: 'gray', borderRadius: 5,
                                                 borderWidth: 1, textAlign: 'center'
                                             }} placeholder="Mobile Number"
@@ -783,7 +785,8 @@ const Register = (props) => {
                                                 justifyContent: 'space-between',
                                             }}>
                                             <TextInput keyboardType={"phone-pad"}
-                                                maxLength={10} style={{ marginLeft: 20, width: '100%' }} placeholder="Mobile No"
+                                                // maxLength={10} 
+                                                style={{ marginLeft: 20, width: '100%' }} placeholder="Mobile No"
                                                 value={registerParams.mobileNo} onChangeText={value => {
                                                     setRegisterParums({ ...registerParams, mobileNo: value })
                                                 }}
@@ -806,7 +809,8 @@ const Register = (props) => {
                                                 justifyContent: 'space-between',
                                             }}>
                                             <TextInput keyboardType={"phone-pad"}
-                                                maxLength={4} style={{ marginLeft: 20, width: '100%' }} placeholder="OTP"
+                                                // maxLength={4}
+                                                style={{ marginLeft: 20, width: '100%' }} placeholder="OTP"
                                                 value={registerParams.otp} onChangeText={value => {
 
                                                     setRegisterParums({ ...registerParams, otp: value })

@@ -302,7 +302,7 @@ const Login = (props) => {
                                             placeholder={'Mobile'}
                                             value={loginParams.email}
                                             keyboardType='number-pad'
-                                            maxLength={10}
+                                            // maxLength={10}
                                             style={{ marginLeft: 20, color: 'black', width: '80%' }}
                                             onChangeText={value => {
                                                 setLoginParums({ ...loginParams, email: value })
