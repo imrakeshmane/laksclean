@@ -532,7 +532,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Juengouo Kemdje Christelle (V7W2U25YRG)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = Z8U9GTLW2Q;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = laksclean/Info.plist;
@@ -564,7 +564,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Juengouo Kemdje Christelle (Z8U9GTLW2Q)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = Z8U9GTLW2Q;
 				INFOPLIST_FILE = laksclean/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
