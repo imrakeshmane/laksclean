@@ -408,7 +408,7 @@ const Register = (props) => {
                                             marginTop: 10,
                                             justifyContent: 'space-between',
                                         }}>
-                                        <TextInput style={{ marginLeft: 20, width: '100%' }} placeholder="First Name"
+                                        <TextInput style={{ marginLeft: 20, color: 'black', width: '100%' }} placeholder="First Name"
                                             value={registerParams.firstName} onChangeText={value => {
                                                 setRegisterParums({ ...registerParams, firstName: value })
                                             }}
@@ -431,7 +431,7 @@ const Register = (props) => {
                                             marginTop: 10,
                                             justifyContent: 'space-between',
                                         }}>
-                                        <TextInput style={{ marginLeft: 20, width: '100%' }} placeholder="Last Name"
+                                        <TextInput style={{ marginLeft: 20, color: 'black', width: '100%' }} placeholder="Last Name"
                                             value={registerParams.lastName} onChangeText={value => {
                                                 setRegisterParums({ ...registerParams, lastName: value })
                                             }}
@@ -455,64 +455,13 @@ const Register = (props) => {
                                         }}>
 
 
-                                        {/* <DropDownPicker
-                                            labelStyle={{ color: colors.lightblueColor }}
-                                            items={[
-                                                {
-                                                    "value": "Canada",
-                                                    "label": "+1",
-                                                    "isoCode": "CA"
-                                                },
-                                                {
-                                                    "value": "United States",
-                                                    "label": "+1",
-                                                    "isoCode": "US"
-                                                },
-                                                {
-                                                    "value": "Cameroon",
-                                                    "label": "+237",
-                                                    "isoCode": "CM"
-                                                },
-                                                {
-                                                    "value": "France",
-                                                    "label": "+33",
-                                                    "isoCode": "FR"
-                                                },
-                                                {
-                                                    "value": "Nigeria",
-                                                    "label": "+234",
-                                                    "isoCode": "NG"
-                                                },
-                                                {
-                                                    "value": "India",
-                                                    "label": "+91",
-                                                    "isoCode": "IN"
-                                                },
-                                            ]}
-                                            placeholder="Code"
-                                            containerStyle={{ height: 50 }}
-                                            style={{
-                                                backgroundColor: '#ffffff', width: 90, borderColor: 'gray', borderRadius: 5,
-                                                borderWidth: 1,
-                                            }}
-                                            dropDownStyle={{ backgroundColor: 'white' }}
-                                            onChangeItem={item => setCountryCodeItem(item.label)}
-                                        /> */}
 
-                                        {/* <TextInput
-
-                                    maxLength={10} style={{
-                                        width: '20%', textAlign: 'center', borderColor: 'gray', borderRadius: 5,
-                                        borderWidth: 1,
-                                    }} placeholder="Code "
-                                    value={registerParams.countryCode} onChangeText={value => {
-                                        setRegisterParums({ ...registerParams, countryCode: value })
-                                    }}
-                                /> */}
                                         <TextInput keyboardType={"phone-pad"}
                                             // maxLength={10} 
                                             style={{
-                                                width: '25%', height: 40, borderColor: 'gray', borderRadius: 5,
+                                                width: '25%', height: 40,
+                                                color: 'black',
+                                                borderColor: 'gray', borderRadius: 5,
                                                 borderWidth: 1, textAlign: 'center'
                                             }} placeholder="+1"
                                             value={registerParams.countryCode}
@@ -524,7 +473,7 @@ const Register = (props) => {
                                         <TextInput keyboardType={"phone-pad"}
                                             // maxLength={10} 
                                             style={{
-                                                width: '70%', height: 40, borderColor: 'gray', borderRadius: 5,
+                                                width: '70%', color: 'black', height: 40, borderColor: 'gray', borderRadius: 5,
                                                 borderWidth: 1, textAlign: 'center'
                                             }} placeholder="Mobile Number"
                                             value={registerParams.mobileNo} onChangeText={value => {
@@ -544,7 +493,7 @@ const Register = (props) => {
                                             marginTop: 10,
                                             justifyContent: 'space-between',
                                         }}>
-                                        <TextInput style={{ marginLeft: 20, width: '100%' }} placeholder="Email"
+                                        <TextInput style={{ marginLeft: 20, color: 'black', width: '100%' }} placeholder="Email"
                                             value={registerParams.email} onChangeText={value => {
                                                 setRegisterParums({ ...registerParams, email: value })
                                             }}
@@ -568,7 +517,7 @@ const Register = (props) => {
                                             justifyContent: 'space-between',
                                         }}>
                                         <TextInput secureTextEntry={showPassword}
-                                            style={{ marginLeft: 20, width: '80%' }} placeholder="Password"
+                                            style={{ marginLeft: 20, color: 'black', width: '80%' }} placeholder="Password"
                                             value={registerParams.password} onChangeText={value => {
                                                 setRegisterParums({ ...registerParams, password: value })
                                             }}
@@ -607,7 +556,7 @@ const Register = (props) => {
                                             justifyContent: 'space-between',
                                         }}>
                                         <TextInput secureTextEntry={showConPassword}
-                                            style={{ marginLeft: 20, width: '80%' }} placeholder="Confirm Password"
+                                            style={{ marginLeft: 20, color: 'black', width: '80%' }} placeholder="Confirm Password"
                                             value={registerParams.confirmPassword} onChangeText={value => {
                                                 setRegisterParums({ ...registerParams, confirmPassword: value })
                                             }}
@@ -786,7 +735,7 @@ const Register = (props) => {
                                             }}>
                                             <TextInput keyboardType={"phone-pad"}
                                                 // maxLength={10} 
-                                                style={{ marginLeft: 20, width: '100%' }} placeholder="Mobile No"
+                                                style={{ marginLeft: 20, color: 'black', width: '100%' }} placeholder="Mobile No"
                                                 value={registerParams.mobileNo} onChangeText={value => {
                                                     setRegisterParums({ ...registerParams, mobileNo: value })
                                                 }}
@@ -810,7 +759,7 @@ const Register = (props) => {
                                             }}>
                                             <TextInput keyboardType={"phone-pad"}
                                                 // maxLength={4}
-                                                style={{ marginLeft: 20, width: '100%' }} placeholder="OTP"
+                                                style={{ marginLeft: 20, color: 'black', width: '100%' }} placeholder="OTP"
                                                 value={registerParams.otp} onChangeText={value => {
 
                                                     setRegisterParums({ ...registerParams, otp: value })
